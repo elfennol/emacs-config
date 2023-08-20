@@ -1,0 +1,170 @@
+#+TITLE: Emacs
+
+- C: independent unit
+- M: unit of language
+- X: eXtend
+- C-h: help
+- C-x: windows, files, buffers, ...
+- C-c: user reserved, custom keys
+
+* Emacs
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Glossary.html][Glossary]]
+
+** General
+
+| Key         | Function                   |
+|-------------+----------------------------|
+| C-h ?       | help-for-help              |
+| C-g         | keyboard-quit              |
+| C-x C-c     | save-buffers-kill-terminal |
+| C-x k       | kill-buffer                |
+| C-z         | suspend-frame              |
+| M-x         | execute-extended-command   |
+|             | recover-this-file          |
+| ESC ESC ESC | keyboard-escape-quit       |
+| M-!         | shell-command              |
+
+** Menu
+
+- https://www.gnu.org/software/emacs/manual/html_node/emacs/Menu-Mouse-Clicks.html
+
+| Key              | Function          | Description        |
+|------------------+-------------------+--------------------|
+| F10              | menu-bar-open     |                    |
+| S-F10            | context-menu-open |                    |
+| C-<down-mouse-1> | mouse-buffer-menu |                    |
+| C-<down-mouse-3> |                   | Mode specific menu |
+
+** Repeat
+
+| Key     | Function          |
+|---------+-------------------|
+| C-u [n] | universal-command |
+| M-{n}   |                   |
+
+** Move
+
+| Key   | Function            |
+|-------+---------------------|
+| C-v   | scroll-up-command   |
+| M-v   | scroll-down-command |
+| C-l   | recenter-top-bottom |
+| C-f   | forward-char        |
+| C-b   | backward-char       |
+| M-f   | forward-word        |
+| M-b   | backward-word       |
+| C-n   | next-line           |
+| C-p   | previous-line       |
+| C-a   | beginning-of-line   |
+| C-e   | end-of-line         |
+| M-a   | backward-sentence   |
+| M-e   | forward-sentence    |
+| M-<   | beginning-of-buffer |
+| M->   | end-of-buffer       |
+| M-g g | goto-line           |
+
+** Search
+
+| Key | Function         |
+|-----+------------------|
+| C-s | isearch-forward  |
+| C-r | isearch-backward |
+
+** Select & Delete & Kill & Undo & Yank & Replace
+
+/!\ Difference between killing text and deleting text: killed text can be reinserted.
+
+| Key       | Function                | Description                    |
+|-----------+-------------------------+--------------------------------|
+| C-SPC     | set-mark-command        |                                |
+| C-x C-x   | exchange-point-and-mark |                                |
+| C-u C-SPC |                         | Cycle through ring of marks    |
+| DEL       | delete-backward-char    |                                |
+| C-d       | delete-char             |                                |
+| M-DEL     | backward-kill-word      |                                |
+| M-d       | kill-word               |                                |
+| C-k       | kill-line               |                                |
+| M-k       | kill-sentence           |                                |
+| C-w       | kill-region             |                                |
+| M-w       | kill-ring-save          |                                |
+| C-x u     | undo                    |                                |
+| C-/       | undo                    |                                |
+| C-y       | yank                    |                                |
+| M-y       | yank-pop                |                                |
+| M-%       | query-replace           |                                |
+| C-M-s     | isearch-forward-regexp  |                                |
+|           | re-builder              | Construct regexp interactively |
+|           | occur                   | Show all matches in a buffer   |
+| M-s h u   | unhighlight-regexp      |                                |
+
+** Frame & Windows
+
+| Key       | Function                            |
+|-----------+-------------------------------------|
+| C-x 0     | delete-window                       |
+| C-x 1     | delete-other-windows                |
+| C-x 2     | split-window-below                  |
+| C-x 3     | split-window-right                  |
+| C-x o     | other-window                        |
+| C-M-v     | scroll-other-window                 |
+| C-M-S-v   | scroll-other-window-down            |
+| C-x 4 C-f | find-file-other-window              |
+| C-x 4 f   |                                     |
+| C-x 5 0   | delete-frame                        |
+| C-x 5 1   | delete-other-frames                 |
+| C-x 5 2   | make-frame-command                  |
+| C-x -     | shrink-window-if-larger-than-buffer |
+| C-x +     | balance-windows                     |
+| C-x ^     | enlarge-window                      |
+| C-x }     | enlarge-window-horizontally         |
+| C-x {     | shrink-window-horizontally          |
+
+** Buffer
+
+| Key     | Function          |
+|---------+-------------------|
+| C-x C-f | find-file         |
+| C-x C-s | save-buffer       |
+| C-x C-b | list-buffers      |
+| C-x b   | switch-to-buffer  |
+| C-x s   | save-some-buffers |
+
+Edit files with root privileges: ~/sudo::/path/file~.
+
+** Color
+
+| Key | Function            |
+|-----+---------------------|
+|     | list-colors-display |
+
+** Customize
+
+*** Change font
+
+*Source* https://groups.google.com/forum/#!msg/ledger-cli/yosrI_zUOI0/OfpDxsQjAAAJ
+
+1. Put cursor on some text whose properties you wish to change.
+2. Type C-u C-x = which will display the properties of the text.
+3. Find out from properties which face you need to customise.
+4. Type M-x customize-face RET the.face.name.from.above RET.
+5. Change and save changes.
+
+** Game
+
+| Key | Function |
+|-----+----------|
+|     | tetris   |
+
+* org
+
+- [[https://orgmode.org/manual/Conventions.html][Conventions]]
+
+** Global and local cycling
+
+| Key               | Name                       |
+|-------------------+----------------------------|
+| <TAB>             | org-cycle                  |
+| S-<TAB>           | org-global-cycle           |
+| C-u C-u <TAB>     | org-set-startup-visibility |
+| C-u C-u C-u <TAB> | show-all                   |

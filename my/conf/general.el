@@ -6,8 +6,18 @@
 (add-to-list 'default-frame-alist `(font . ,my-default-font))
 ;; https://www.emacswiki.org/emacs/ToolBar
 (tool-bar-mode -1)
+;; https://www.emacswiki.org/emacs/ScrollBar
+(scroll-bar-mode -1)
+;; https://www.emacswiki.org/emacs/MenuBar
+(menu-bar-mode -1)
 ;; Theme
 (load-theme my-theme)
+;; https://www.emacswiki.org/emacs/LineNumbers
+(global-display-line-numbers-mode)
+;; Delete trailing whitespace when the file is saved.
+;; https://stackoverflow.com/a/7747259
+(add-hook 'before-save-hook
+          'delete-trailing-whitespace)
 ;; Disable backup files
 ;; http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
 (setq make-backup-files nil)
