@@ -14,6 +14,6 @@
 ;; Uncomment the corresponding line in general.el
 (defconst my-auto-save-file-directory "~/.emacs.d/my/autosave")
 
-(defconst my-default-web-browser "google-chrome")
+(defconst my-default-web-browser "firefox")
 (defconst my-pdf-viewer-cmd "okular %s")
 (defconst my-org-files "~/notebook")
