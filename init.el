@@ -1,6 +1,7 @@
 ;; https://www.emacswiki.org/emacs/InstallingPackages
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list
+ 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 ;; https://github.com/mhayashi1120/Emacs-langtool
 (setq langtool-java-classpath
@@ -22,6 +23,5 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (if (not (file-exists-p custom-file))
-    (make-empty-file custom-file)
-)
+    (make-empty-file custom-file))
 (load custom-file)

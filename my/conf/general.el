@@ -16,8 +16,7 @@
 (global-display-line-numbers-mode)
 ;; Delete trailing whitespace when the file is saved.
 ;; https://stackoverflow.com/a/7747259
-(add-hook 'before-save-hook
-          'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; Disable backup files
 ;; http://ergoemacs.org/emacs/emacs_set_backup_into_a_directory.html
 (setq make-backup-files nil)
@@ -36,8 +35,9 @@
 ;; https://www.emacswiki.org/emacs/VisualLineMode
 (global-visual-line-mode 1)
 ;; https://www.emacswiki.org/emacs/BrowseUrl
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program (eval my-default-web-browser))
+(setq
+ browse-url-browser-function 'browse-url-generic
+ browse-url-generic-program (eval my-default-web-browser))
 ;; https://www.emacswiki.org/emacs/RecentFiles
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
