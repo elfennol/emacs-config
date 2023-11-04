@@ -1,7 +1,9 @@
 ;;;;;;;; Org mode ;;;;;;;;
 ;; Global keys
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
+;; https://orgmode.org/manual/Activation.html
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
 ;; Fontify code in code blocks
 ;; https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html
 (setq org-src-fontify-natively t)
