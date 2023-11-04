@@ -27,7 +27,7 @@
 
 ** Menu
 
-- https://www.gnu.org/software/emacs/manual/html_node/emacs/Menu-Mouse-Clicks.html
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Menu-Mouse-Clicks.html][Mouse Clicks for Menus]]
 
 | Key              | Function          | Description        |
 |------------------+-------------------+--------------------|
@@ -138,18 +138,6 @@ Edit files with root privileges: ~/sudo::/path/file~.
 |-----+---------------------|
 |     | list-colors-display |
 
-** Customize
-
-*** Change font
-
-*Source* https://groups.google.com/forum/#!msg/ledger-cli/yosrI_zUOI0/OfpDxsQjAAAJ
-
-1. Put cursor on some text whose properties you wish to change.
-2. Type C-u C-x = which will display the properties of the text.
-3. Find out from properties which face you need to customise.
-4. Type M-x customize-face RET the.face.name.from.above RET.
-5. Change and save changes.
-
 ** Game
 
 | Key | Function |
@@ -168,3 +156,129 @@ Edit files with root privileges: ~/sudo::/path/file~.
 | S-<TAB>           | org-global-cycle           |
 | C-u C-u <TAB>     | org-set-startup-visibility |
 | C-u C-u C-u <TAB> | show-all                   |
+
+** Motion
+
+| Key     | Name                            |
+|---------+---------------------------------|
+| C-c C-n | org-next-visible-heading        |
+| C-c C-p | org-previous-visible-heading    |
+| C-c C-f | org-forward-heading-same-level  |
+| C-c C-b | org-backward-heading-same-level |
+| C-c C-u | outline-up-heading              |
+
+** Editing
+
+*** Insert
+
+| Key     | Name                                    | Description              |
+|---------+-----------------------------------------+--------------------------|
+| M-RET   | org-meta-return                         | New heading, item or row |
+| C-RET   | org-insert-heading-respect-content      |                          |
+| M-S-RET | org-insert-todo-heading                 |                          |
+| C-S-RET | org-insert-todo-heading-respect-content |                          |
+| C-c *   | org-toggle-heading                      |                          |
+
+*** Promote
+
+| Key       | Name                |
+|-----------+---------------------|
+| M-LEFT    | org-do-promote      |
+| M-RIGHT   | org-do-demote       |
+| M-S-LEFT  | org-promote-subtree |
+| M-S-RIGHT | org-demote-subtree  |
+
+*** Move
+
+| Key         | Name                  |
+|-------------+-----------------------|
+| M-UP        | org-move-subtree-up   |
+| M-DOWN      | org-move-subtree-down |
+| C-c @       | org-mark-subtree      |
+| C-c C-x C-w | org-cut-subtree       |
+| C-c C-x M-w | org-copy-subtree      |
+| C-c C-x C-y | org-paste-subtree     |
+| C-c C-w     | org-refile            |
+| C-c ^       | org-sort              |
+
+*** Clone
+
+| Key       | Name                              |
+|-----------+-----------------------------------|
+| C-c C-x c | org-clone-subtree-with-time-shift |
+
+** Sparse Trees
+
+| Key     | Name            | Descriptiom               |
+|---------+-----------------+---------------------------|
+| C-c /   | org-sparse-tree |                           |
+| M-g M-n | next-error      |                           |
+| M-g n   |                 |                           |
+| M-g M-p | previous-error  |                           |
+| M-g p   |                 |                           |
+| C-c C-c |                 | Clear out the sparse tree |
+
+** Plain Lists
+
+| Key     | Name | Description                                |
+|---------+------+--------------------------------------------|
+| C-c C-c |      | Toggle checkbox                            |
+| C-c -   |      | Cycle through bullets                      |
+| C-c C-* |      | Turn into a subtree of the current heading |
+
+** Drawer
+
+| Key           | Name              | Description              |
+|---------------+-------------------+--------------------------|
+| C-c C-x d     | org-insert-drawer |                          |
+| C-u C-c C-x d |                   | Insert a property drawer |
+
+** Tables
+
+https://orgmode.org/manual/Built_002din-Table-Editor.html
+
+Create table:
+- Select fields separated by comma
+- ~C-c |~
+
+Heading separation:
+- Start line with ~|-~
+- ~<TAB>~
+
+Shrink: To set the width of a column, one field anywhere in the column may contain just the string ~<N>~ where N specifies the width as a number of characters. See [[https://orgmode.org/manual/Column-Width-and-Alignment.html][Column Width and Alignment]]
+
+| Key       | Name                        | Description            |
+|-----------+-----------------------------+------------------------|
+| C-c C-c   |                             | Re-align table         |
+| <TAB>     |                             | Move to the next field |
+| M-LEFT    | org-table-move-column-left  |                        |
+| M-RIGHT   | org-table-move-column-right |                        |
+| M-S-LEFT  | org-table-delete-column     |                        |
+| M-S-RIGHT | org-table-insert-column     |                        |
+| M-UP      | org-table-move-row-up)      |                        |
+| M-DOWN    | org-table-move-row-down     |                        |
+| M-S-UP    | org-table-kill-row          |                        |
+| S-UP      | org-table-move-cell-up      |                        |
+| S-DOWN    | org-table-move-cell-down    |                        |
+| S-LEFT    | org-table-move-cell-left    |                        |
+| S-RIGHT   | org-table-move-cell-right   |                        |
+| M-S-DOWN  | org-table-insert-row        |                        |
+| C-c -     | org-table-insert-hline      |                        |
+| C-c ^     | org-table-sort-lines        |                        |
+
+** Spreadsheet
+
+- [[https://orgmode.org/manual/Org-Plot.html][Org Plot]] (install package gnuplot)
+
+| Key   | name                                 |
+|-------+--------------------------------------|
+| C-c ? | org-table-field-info                 |
+| C-c } | org-table-toggle-coordinate-overlays |
+| C-c = | org-table-eval-formula               |
+
+** Link
+
+| Key     | name              |
+|---------+-------------------|
+| C-c C-l | org-insert-link   |
+| C-c C-o | org-open-at-point |
