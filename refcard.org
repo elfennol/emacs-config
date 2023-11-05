@@ -1,4 +1,4 @@
-#+TITLE: Emacs
+#+TITLE: Emacs refcard
 
 - C: independent unit
 - M: unit of language
@@ -329,3 +329,74 @@ Checkbox works in plain list.
 | C-c C-c   |                                     | On property, exec commands |
 | S-RIGHT   | org-property-next-allowed-value     |                            |
 | S-LEFT    | org-property-previous-allowed-value |                            |
+
+** Column view
+
+- [[https://orgmode.org/manual/Using-column-view.html][Using column view]]
+
+| Key         | Function    | Description                       |
+|-------------+-------------+-----------------------------------|
+| C-c C-x C-c | org-columns | Turn on                           |
+| C-c C-c     |             | Turn off                          |
+| q           |             | Turn off (on a columns view line) |
+| r           |             | Recreate (on a columns view line) |
+| g           |             | Recreate (on a columns view line) |
+
+** Dates and times
+
+*** Timestamps
+
+- [[https://orgmode.org/manual/The-date_002ftime-prompt.html][The date/time prompt]]
+
+| Key     | Function                | Description         |
+|---------+-------------------------+---------------------|
+| C-c .   | org-time-stamp          |                     |
+| C-c !   | org-time-stamp-inactive |                     |
+| C-c C-c |                         | Normalize timestamp |
+| C-c >   | org-goto-calendar       |                     |
+| C-c C-o | org-open-at-point       |                     |
+| S-LEFT  | org-timestamp-down-day  |                     |
+| S-RIGHT | org-timestamp-up-day    |                     |
+| S-UP    | org-timestamp-up        |                     |
+| S-DOWN  | org-timestamp-down      |                     |
+| C-c C-y | org-evaluate-time-range |                     |
+
+*** Deadlines and scheduling
+
+- [[https://orgmode.org/manual/Repeated-tasks.html][Repeated tasks]]
+
+| Key     | Function     |
+|---------+--------------|
+| C-c C-d | org-deadline |
+| C-c C-s | org-schedule |
+
+*** Clocking Work Time
+
+- [[https://orgmode.org/manual/The-clock-table.html][The clock table]]
+
+| Key         | Function          | Description                 |
+|-------------+-------------------+-----------------------------|
+| C-c C-x C-i | org-clock-in      |                             |
+| C-c C-x C-o | org-clock-out     |                             |
+| C-c C-c     |                   | Recompute the time interval |
+| C-c C-x C-q | org-clock-cancel  |                             |
+| C-c C-x C-j | org-clock-goto    |                             |
+| C-c C-x C-d | org-clock-display |                             |
+
+*** Effort Estimates
+
+| Key       | Function       |
+|-----------+----------------|
+| C-c C-x e | org-set-effort |
+
+*** Timer
+
+- [[https://orgmode.org/manual/Timers.html][Taking Notes with a Relative Timer]]
+
+** Refiling and archiving
+
+| Key         | Function                    |
+|-------------+-----------------------------|
+| C-c C-w     | org-refile                  |
+| C-c C-x C-a | org-archive-subtree-default |
+| C-c C-x a   | org-toggle-archive-tag      |
