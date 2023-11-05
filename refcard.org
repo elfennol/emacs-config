@@ -24,6 +24,7 @@
 |             | recover-this-file          |
 | ESC ESC ESC | keyboard-escape-quit       |
 | M-!         | shell-command              |
+| C-M-i       | complete-symbol            |
 
 ** Menu
 
@@ -150,7 +151,7 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 ** Global and local cycling
 
-| Key               | Name                       |
+| Key               | Function                   |
 |-------------------+----------------------------|
 | <TAB>             | org-cycle                  |
 | S-<TAB>           | org-global-cycle           |
@@ -159,7 +160,7 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 ** Motion
 
-| Key     | Name                            |
+| Key     | Function                        |
 |---------+---------------------------------|
 | C-c C-n | org-next-visible-heading        |
 | C-c C-p | org-previous-visible-heading    |
@@ -171,7 +172,7 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 *** Insert
 
-| Key     | Name                                    | Description              |
+| Key     | Function                                | Description              |
 |---------+-----------------------------------------+--------------------------|
 | M-RET   | org-meta-return                         | New heading, item or row |
 | C-RET   | org-insert-heading-respect-content      |                          |
@@ -181,7 +182,7 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 *** Promote
 
-| Key       | Name                |
+| Key       | Function            |
 |-----------+---------------------|
 | M-LEFT    | org-do-promote      |
 | M-RIGHT   | org-do-demote       |
@@ -190,7 +191,7 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 *** Move
 
-| Key         | Name                  |
+| Key         | Function              |
 |-------------+-----------------------|
 | M-UP        | org-move-subtree-up   |
 | M-DOWN      | org-move-subtree-down |
@@ -203,13 +204,13 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 *** Clone
 
-| Key       | Name                              |
+| Key       | Function                          |
 |-----------+-----------------------------------|
 | C-c C-x c | org-clone-subtree-with-time-shift |
 
 ** Sparse Trees
 
-| Key     | Name            | Descriptiom               |
+| Key     | Function        | Descriptiom               |
 |---------+-----------------+---------------------------|
 | C-c /   | org-sparse-tree |                           |
 | M-g M-n | next-error      |                           |
@@ -220,22 +221,21 @@ Edit files with root privileges: ~/sudo::/path/file~.
 
 ** Plain Lists
 
-| Key     | Name | Description                                |
-|---------+------+--------------------------------------------|
-| C-c C-c |      | Toggle checkbox                            |
-| C-c -   |      | Cycle through bullets                      |
-| C-c C-* |      | Turn into a subtree of the current heading |
+| Key     | Function | Description                                |
+|---------+----------+--------------------------------------------|
+| C-c -   |          | Cycle through bullets                      |
+| C-c C-* |          | Turn into a subtree of the current heading |
 
 ** Drawer
 
-| Key           | Name              | Description              |
+| Key           | Function          | Description              |
 |---------------+-------------------+--------------------------|
 | C-c C-x d     | org-insert-drawer |                          |
 | C-u C-c C-x d |                   | Insert a property drawer |
 
 ** Tables
 
-https://orgmode.org/manual/Built_002din-Table-Editor.html
+[[https://orgmode.org/manual/Built_002din-Table-Editor.html][Built-in Table Editor]]
 
 Create table:
 - Select fields separated by comma
@@ -247,7 +247,7 @@ Heading separation:
 
 Shrink: To set the width of a column, one field anywhere in the column may contain just the string ~<N>~ where N specifies the width as a number of characters. See [[https://orgmode.org/manual/Column-Width-and-Alignment.html][Column Width and Alignment]]
 
-| Key       | Name                        | Description            |
+| Key       | Function                    | Description            |
 |-----------+-----------------------------+------------------------|
 | C-c C-c   |                             | Re-align table         |
 | <TAB>     |                             | Move to the next field |
@@ -270,7 +270,7 @@ Shrink: To set the width of a column, one field anywhere in the column may conta
 
 - [[https://orgmode.org/manual/Org-Plot.html][Org Plot]] (install package gnuplot)
 
-| Key   | name                                 |
+| Key   | Function                             |
 |-------+--------------------------------------|
 | C-c ? | org-table-field-info                 |
 | C-c } | org-table-toggle-coordinate-overlays |
@@ -278,7 +278,54 @@ Shrink: To set the width of a column, one field anywhere in the column may conta
 
 ** Link
 
-| Key     | name              |
+| Key     | Function          |
 |---------+-------------------|
 | C-c C-l | org-insert-link   |
 | C-c C-o | org-open-at-point |
+
+** Keywords TODO
+
+- [[https://orgmode.org/manual/Breaking-Down-Tasks.html][Breaking Down Tasks into Subtasks]]: To keep an overview of the fraction of subtasks that have already been marked as done, insert either ~[/]~ or ~[%]~ anywhere in the headline. (Works for checkboxes)
+- [[https://orgmode.org/manual/Tracking-your-habits.html][Tracking your habits]]
+
+| Key         | Function                | Description              |
+|-------------+-------------------------+--------------------------|
+| C-c C-t     | org-todo                | Rotate TODO state        |
+| C-u C-c C-t |                         | Rotate TODO state + note |
+| S-RIGHT     |                         | next TODO state          |
+| S-LEFT      |                         | previous TODO state      |
+| S-M-RET     | org-insert-todo-heading |                          |
+| C-c ,       | org-priority            |                          |
+| S-UP        | org-priority-up         |                          |
+| S-DOWN      | org-priority-down       |                          |
+
+** Checkbox
+
+Checkbox works in plain list.
+
+| Key             | Function                | Description            |
+|-----------------+-------------------------+------------------------|
+| C-u C-c C-c     |                         | Add checkbox           |
+| M-S-RET         | org-insert-todo-heading | New item with checkbox |
+| C-c C-c         |                         | Toggle checkbox        |
+| C-u C-u C-c C-c |                         | Set to ~[-]~           |
+| C-c C-x C-r     | org-toggle-radio-button |                        |
+
+** Tags
+
+- Tags are inserted at the end of the headline.
+- [[https://orgmode.org/manual/Tag-Hierarchy.html][Tag Hierarchy]]
+
+| Key     | Function             | Description                          |
+|---------+----------------------+--------------------------------------|
+| C-c C-q | org-set-tags-command |                                      |
+| C-c C-c |                      | Same as ~C-c C-q~ when in a headline |
+
+** Property
+
+| Key       | Function                            | Description                |
+|-----------+-------------------------------------+----------------------------|
+| C-c C-x p | org-set-property                    |                            |
+| C-c C-c   |                                     | On property, exec commands |
+| S-RIGHT   | org-property-next-allowed-value     |                            |
+| S-LEFT    | org-property-previous-allowed-value |                            |
