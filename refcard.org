@@ -400,3 +400,31 @@ Checkbox works in plain list.
 | C-c C-w     | org-refile                  |
 | C-c C-x C-a | org-archive-subtree-default |
 | C-c C-x a   | org-toggle-archive-tag      |
+
+** Agenda Views
+
+- [[https://orgmode.org/manual/Matching-tags-and-properties.html][Matching tags and properties]]
+- [[https://orgmode.org/manual/Agenda-Commands.html][Commands in the Agenda Buffer]]
+- [[https://orgmode.org/manual/Storing-searches.html][Storing searches]]
+
+| Key         | Function           |
+|-------------+--------------------|
+| C-c a       | org-agenda         |
+| C-x C-w     | org-agenda-write   |
+| C-c C-x C-c | org-agenda-columns |
+
+** Markup
+
+- ~*bold*~
+- ~/italic/~
+- ~_underlined_~
+- ~=verbatim=~
+-  ~~code~~
+- ~+strike-through+~
+- Symbols list: ~org-entities-help~
+
+| Key       | Function                      | Description                      |
+|-----------+-------------------------------+----------------------------------|
+| C-c C-x \ | org-toggle-pretty-entities    |                                  |
+| C-c C-,   | org-insert-structure-template |                                  |
+| C-c '     | org-edit-special              | Edit the source code (begin_src) |
