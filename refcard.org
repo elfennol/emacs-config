@@ -10,6 +10,7 @@
 * Emacs
 
 - [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Glossary.html][Glossary]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Regexps.html#Regexps][Syntax of Regular Expressions]]
 
 ** General
 
@@ -25,6 +26,7 @@
 | ESC ESC ESC | keyboard-escape-quit       |
 | M-!         | shell-command              |
 | C-M-i       | complete-symbol            |
+| C-x C-e     | eval-last-sexp             |
 
 ** Menu
 
@@ -148,6 +150,10 @@ Edit files with root privileges: ~/sudo::/path/file~.
 * org
 
 - [[https://orgmode.org/manual/Conventions.html][Conventions]]
+- [[https://orgmode.org/worg/org-syntax.html][Org Syntax]]
+- Lint: ~M-x org-lint <RET>~
+- Contextual help: ~C-c C-x I~
+- Escape character (zero width space): ~C-x 8 RET 200b RET~
 
 ** Global and local cycling
 
@@ -419,7 +425,7 @@ Checkbox works in plain list.
 - ~/italic/~
 - ~_underlined_~
 - ~=verbatim=~
--  ~~code~~
+- ~~code~~
 - ~+strike-through+~
 - Symbols list: ~org-entities-help~
 
@@ -428,3 +434,13 @@ Checkbox works in plain list.
 | C-c C-x \ | org-toggle-pretty-entities    |                                  |
 | C-c C-,   | org-insert-structure-template |                                  |
 | C-c '     | org-edit-special              | Edit the source code (begin_src) |
+
+** Exporting
+
+| Key     | Function            |
+|---------+---------------------|
+| C-c C-e | org-export-dispatch |
+
+** Source Code
+
+- [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][Babel: Languages]]
