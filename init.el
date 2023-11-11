@@ -19,6 +19,7 @@
 (load (concat my-conf-directory "general.el"))
 (load (concat my-conf-directory "calendar.el"))
 (load (concat my-conf-directory "orgmode.el"))
+(load (concat my-conf-directory "langtool.el"))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
 (setq custom-file (concat user-emacs-directory "custom.el"))
