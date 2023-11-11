@@ -444,3 +444,11 @@ Checkbox works in plain list.
 ** Source Code
 
 - [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][Babel: Languages]]
+
+* langtool.el
+
+- [[https://github.com/mhayashi1120/Emacs-langtool#usage][Usage]]
+
+* Emacs ELisp AutoFmt
+
+- [[https://codeberg.org/ideasman42/emacs-elisp-autofmt#usage][Usage]]
