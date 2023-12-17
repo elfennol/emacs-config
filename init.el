@@ -1,16 +1,7 @@
 ;; https://www.emacswiki.org/emacs/InstallingPackages
-(require 'package)
-(add-to-list
- 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-;; https://github.com/mhayashi1120/Emacs-langtool
-(setq langtool-java-classpath
-      "/usr/share/languagetool:/usr/share/java/languagetool/*")
-(require 'langtool)
-
-;; https://github.com/integral-dw/org-superstar-mode
-(require 'org-superstar)
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+;; Load packages
+(load (concat user-emacs-directory "packages.el"))
 
 ;; Load parameters
 (load (concat user-emacs-directory "parameters.el"))
@@ -19,6 +10,7 @@
 (load (concat my-conf-directory "general.el"))
 (load (concat my-conf-directory "calendar.el"))
 (load (concat my-conf-directory "orgmode.el"))
+(load (concat my-conf-directory "superstar.el"))
 (load (concat my-conf-directory "langtool.el"))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
