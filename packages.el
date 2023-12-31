@@ -7,4 +7,4 @@
 ;; See package-install-selected-packages
 ;; See package-autoremove
 (setq package-selected-packages
-      '(elisp-autofmt langtool org-superstar))
+      '(elisp-autofmt langtool org-superstar markdown-mode))
