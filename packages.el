@@ -1,4 +1,5 @@
 ;;;;;;;; Packages ;;;;;;;;
+(require 'package)
 ;; See package-list-packages
 (add-to-list
  'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -7,4 +8,4 @@
 ;; See package-install-selected-packages
 ;; See package-autoremove
 (setq package-selected-packages
-      '(elisp-autofmt langtool org-superstar markdown-mode mermaid-mode))
+      '(elisp-autofmt langtool markdown-mode org-superstar))
