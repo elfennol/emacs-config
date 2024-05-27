@@ -41,3 +41,6 @@
  '(lambda ()
     (delete '("\\.pdf\\'" . default) org-file-apps)
     (add-to-list 'org-file-apps `("\\.pdf\\'" . ,my-pdf-viewer-cmd))))
+;; Active Babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((shell . t) (python . t)))
