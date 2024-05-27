@@ -48,6 +48,10 @@
 
 ** Move
 
+Tips:
+- Insert line above: C-a C-o
+- Insert line below: C-e RET
+
 | Key   | Function            |
 |-------+---------------------|
 | C-v   | scroll-up-command   |
@@ -154,6 +158,8 @@ Edit files with root privileges: ~/sudo::/path/file~.
 - Lint: ~M-x org-lint <RET>~
 - Contextual help: ~C-c C-x I~
 - Escape character (zero width space): ~C-x 8 RET 200b RET~
+- Headlines: the name defined in org-footnote-section is reserved
+- An empty line after the end of a subtree is considered part of it.
 
 ** Global and local cycling
 
