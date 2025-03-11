@@ -12,7 +12,7 @@
 (menu-bar-mode -1)
 ;; Turn off alarm bell
 ;; https://www.emacswiki.org/emacs/AlarmBell
- (setq ring-bell-function 'ignore)
+(setq ring-bell-function 'ignore)
 ;; Theme
 (load-theme my-theme)
 ;; https://www.emacswiki.org/emacs/LineNumbers
