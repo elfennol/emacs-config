@@ -10,6 +10,9 @@
 (scroll-bar-mode -1)
 ;; https://www.emacswiki.org/emacs/MenuBar
 (menu-bar-mode -1)
+;; Turn off alarm bell
+;; https://www.emacswiki.org/emacs/AlarmBell
+ (setq ring-bell-function 'ignore)
 ;; Theme
 (load-theme my-theme)
 ;; https://www.emacswiki.org/emacs/LineNumbers
