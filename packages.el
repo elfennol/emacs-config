@@ -1,3 +1,4 @@
+
 ;;;;;;;; Packages ;;;;;;;;
 (require 'package)
 ;; See package-list-packages
@@ -8,4 +9,4 @@
 ;; See package-install-selected-packages
 ;; See package-autoremove
 (setq package-selected-packages
-      '(elisp-autofmt langtool markdown-mode org-superstar))
+      '(elisp-autofmt langtool ledger-mode markdown-mode org-superstar))
