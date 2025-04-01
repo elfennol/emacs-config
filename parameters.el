@@ -2,7 +2,7 @@
 (defconst my-conf-directory (concat user-emacs-directory "my/conf/"))
 (defconst my-site-lisp-directory "/usr/share/emacs/site-lisp/")
 (defconst my-language-environment "UTF-8")
-(defconst my-default-font "Hack 11")
+(defconst my-font "Hack 11")
 (defconst my-theme 'modus-vivendi)
 
 ;; Backup files directory
@@ -14,6 +14,6 @@
 ;; Uncomment the corresponding line in general.el
 (defconst my-auto-save-file-directory "~/.emacs.d/my/autosave")
 
-(defconst my-default-web-browser "brave")
+(defconst my-web-browser "brave")
 (defconst my-pdf-viewer-cmd "okular %s")
-(defconst my-org-files "~/notebook")
+(defconst my-org-directory "~/notebook")

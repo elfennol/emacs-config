@@ -13,7 +13,7 @@
 ;; Agenda file
 ;; https://stackoverflow.com/questions/11384516/how-to-make-all-org-files-under-a-folder-added-in-agenda-list-automatically
 (setq org-agenda-files
-      (directory-files-recursively my-org-files "org$" nil nil t))
+      (directory-files-recursively my-org-directory "org$" nil nil t))
 ;; "TODO" keywords
 ;; https://orgmode.org/manual/Workflow-states.html
 (setq org-todo-keywords

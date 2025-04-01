@@ -3,7 +3,7 @@
 (set-language-environment (eval my-language-environment))
 ;; https://www.emacswiki.org/emacs/SetFonts
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html
-(add-to-list 'default-frame-alist `(font . ,my-default-font))
+(add-to-list 'default-frame-alist `(font . ,my-font))
 ;; https://www.emacswiki.org/emacs/ToolBar
 (tool-bar-mode -1)
 ;; https://www.emacswiki.org/emacs/ScrollBar
@@ -40,7 +40,7 @@
 ;; https://www.emacswiki.org/emacs/BrowseUrl
 (setq
  browse-url-browser-function 'browse-url-generic
- browse-url-generic-program (eval my-default-web-browser))
+ browse-url-generic-program (eval my-web-browser))
 ;; https://www.emacswiki.org/emacs/RecentFiles
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)

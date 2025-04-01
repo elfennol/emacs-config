@@ -10,6 +10,7 @@
 (load (concat my-conf-directory "general.el"))
 (load (concat my-conf-directory "calendar.el"))
 (load (concat my-conf-directory "orgmode.el"))
+(load (concat my-conf-directory "orgroam.el"))
 (load (concat my-conf-directory "superstar.el"))
 (load (concat my-conf-directory "langtool.el"))
 
