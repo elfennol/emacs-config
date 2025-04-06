@@ -105,6 +105,19 @@ Tips:
 |           | occur                   | Show all matches in a buffer   |
 | M-s h u   | unhighlight-regexp      |                                |
 
+** Code
+
+| Key     | Function       |
+|---------+----------------|
+| M-C-\   | indent-region  |
+
+** elisp-mode
+
+| Key     | Function             |
+|---------+----------------------|
+| C-x C-e | eval-last-sexp       |
+| C-j     | eval-print-last-sexp |
+
 ** Frame & Windows
 
 | Key       | Function                            |
